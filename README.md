@@ -1,2 +1,2 @@
 # Advanced labs
-Lab #1 -- Quantum Hall effect
+Lab #1 -- Hall effect
