@@ -3,10 +3,19 @@ import scipy as sp
 import pandas as pd
 from matplotlib import pyplot as plt
 
-def simplePlot(x, y, errorX, errorY, xLabel, yLabel, plotName):
+def simplePlot(x, y, xLabel='X', yLabel='Y', plotName='default',
+               errorX=None, errorY=None):
+    if errorX is None:
+        xerr = 0
+    else:
+        xerr=errorX
+    if errorY is None:
+        yerr = 0
+    else:
+        yerr=errorY
     fig, ax = plt.subplots(1,1,figsize=(10,5))
-    ax.plot(x, y, '.')
-    ax.errorbar(x, y, yerr = errorY, xerr = errorX, linestyle="None")
+    ax.plot(x, y, '-')
+    ax.errorbar(x, y, yerr=yerr, xerr=xerr)
     ax.grid()
     ax.set_ylabel(yLabel, fontsize=20)
     ax.set_xlabel(xLabel, fontsize=20)
