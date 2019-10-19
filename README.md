@@ -1,2 +1,2 @@
-# Advanced labs
-Lab #1 -- Hall effect
+# University of Stuttgart Masters in Physics Lab Course
+To be Determined
